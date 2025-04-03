@@ -40,6 +40,10 @@ For example:
 Create the following text inside:
 
 ```md
+---
+version: 1.0.1
+---
+
 # MCP Server: Production
 
 ## Basic Information
