@@ -46,6 +46,8 @@ version: 1.0.1
 
 # MCP Server: Production
 
+Here, I describe what my MCP Server is doing and why the LLM would decide to include my server in a specific request, which is queried.
+
 ## Basic Information
 - **Name**: Production Jonnyzzz MCP Server
 - **ID**: prod-mcp-01
