@@ -13,10 +13,10 @@ Here are the most popular MCP Clients:
 - Cursor
 - Windsurf
 - Warp
-- <PR to add you>
+- **PR to add you**
 
 # Supported in the following tools
-- <PR if you support the spec>
+- **PR if you support the spec**
 
 # Specification
 
