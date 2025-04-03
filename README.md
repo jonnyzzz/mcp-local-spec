@@ -1,5 +1,7 @@
 # Discorevy local MCP Servers. Specification.
 
+Version: 1.0.1
+
 # Goals
 
 This specification aims to allow _the standard way_ to list and configure [MCP](https://docs.anthropic.com/en/docs/agents-and-tools/mcp) Servers on a local machine.
