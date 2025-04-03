@@ -1,27 +1,34 @@
-# mcp-local-spec
+# Discorevy local MCP Servers. Specification.
 
-Goals
-##
+# Goals
 
-The goal of this specification is to allow a standard way to list and configure MCP Servers on a local machine.
+This specification aims to allow _the standard way_ to list and configure [MCP](https://docs.anthropic.com/en/docs/agents-and-tools/mcp) Servers on a local machine.
 
-Specification for the local [MCP](https://docs.anthropic.com/en/docs/agents-and-tools/mcp) server discovery
+Many tools already use MCP Servers to augment the LLMs. Currently, there is no standard approach to quickly registering an MCP Server. 
 
-There are many tools on a machine that can use MCP Servers to augment the AI. There is a non-standard approach to configuring the MCP Server per each tool. We mean the tools like
+Here are the most popular MCP Clients:
 - IntelliJ IDEA
 - Anthropic Claude
 - OpenAI ChatGPT
 - Cursor
 - Windsurf
+- Warp
 - <PR to add you>
 
 # Supported in the following tools
-- 
+- <PR if you support the spec>
 
 # Specification
 
 Create a file per each MCP server in the `~/.mcp` folder (`%USER_HOME%` on Windows).
-The file is a Markdown file that explains the LLM about your MCP server.
+
+The file is a Markdown file that explains an LLM (such as Claude or CharGPT) about your MCP Server details. The client uses LLM to transform your explanation into an actionable MCP Server.
+
+The client is required to regularly refresh the information from the disc to discover new MCP Servers. 
+
+This protocol does not resolve any security implications for MCP servers. That is still the responsibility of MCP Clients.
+
+
 For example:
 
 ```
@@ -72,5 +79,6 @@ Create the following text inside:
 
 # How to use the Spec?
 
-An MCP client uses the LLM (Claude, o1) to extract the necessary information from each of the available MCP servers, which are discovered in the files under the `~/.mcp` folder. 
+An MCP client uses the LLM (e.g., Claude, ChatGPT) to extract the necessary information from each of the available MCP server's markdown files, which are discovered in the files under the `~/.mcp` folder. 
 It is up to the LLM and the client to decide if to use a specific LLM, ask for credentials, and so on. 
+The client should refresh the files from the disk regularly.
